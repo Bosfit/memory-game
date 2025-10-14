@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* --- Headings --- */
+h1 {
+  margin-top: 20px;
+}
+
+.instructions {
+  color: #cccccc;
+}
+
+/* --- Game Area --- */
+.game-area {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+
+.tile {
+  width: 120px;
+  height: 120px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.red {
+  background-color: #e74c3c;
+}
+.green {
+  background-color: #2ecc71;
+}
+.blue {
+  background-color: #3498db;
+}
+.yellow {
+  background-color: #f1c40f;
+}
+
+.active {
+  opacity: 0.7;
+}
+
+/* --- Controls Section --- */
+.controls {
+  margin-top: 30px;
+}
+
+.controls button {
+  background-color: #555;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #777;
+}
+
+/* --- Mobile First --- */
+@media (min-width: 600px) {
+  .game-area {
+    grid-template-columns: repeat(2, 150px);
+    grid-gap: 15px;
+  }
+
+  .tile {
+    width: 150px;
+    height: 150px;
+  }
+}

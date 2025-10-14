@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- Meta tags for search engines -->
+  <meta name="description" content="Memory Game: Watch the pattern, then copy it!">
+  <meta name="keywords" content="memory game, simon says, game, fun">
+  <title>Memory Game</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <h1>Memory Game</h1>
+    <p class="instructions">Press "Start" to begin. Watch the pattern, then copy it!</p>
+
+    <div class="game-area">
+      <button class="tile red"></button>
+      <button class="tile green"></button>
+      <button class="tile blue"></button>
+      <button class="tile yellow"></button>
+    </div>
+
+    <div class="controls">
+      <button id="start">Start</button>
+      <button id="restart">Restart</button>
+      <p>Level: <span id="level">0</span></p>
+      <p>High Score: <span id="highscore">0</span></p>
+      <p id="status">Press Start to Play</p>
+    </div>
+
+<script src="assets/js/script.js"></script>
+
+  </body>
+</html>
