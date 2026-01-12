@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const tiles = document.querySelectorAll('.tile'); // the 4 colour buttons
 const startBtn = document.getElementById('start');
 const restartBtn = document.getElementById('restart');
@@ -17,15 +18,21 @@ let running = false;   // is a game currently in progress?
 let inPlayback = false;// true while the game is showing the pattern (player must wait)
 
 
+// Helper function to set up click listener for a tile
+function setupTileClickListener(tile) {
+  tile.addEventListener('click', function () {
+    handleTileClick(tile);
+  });
+}
+
 loadHighScore();
 updateLevel(0);
 setStatus('Press Start to Play');
 
 // Add click listeners to each tile
 for (let i = 0; i < tiles.length; i++) {
-  tiles[i].addEventListener('click', function () {
-    handleTileClick(this);
-  });
+  const tile = tiles[i];
+  setupTileClickListener(tile);
 }
 
 // Add listeners to buttons
